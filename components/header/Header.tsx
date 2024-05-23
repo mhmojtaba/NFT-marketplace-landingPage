@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "/public/logo.png";
 import Button from "../button/Button";
 import styled from "styled-components";
 import { BiWallet } from "react-icons/bi";
@@ -104,7 +104,7 @@ const Header = () => {
 
 const HeaderStyle = styled.header`
     nav {
-      display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem;
@@ -123,7 +123,7 @@ const HeaderStyle = styled.header`
     border-radius: 10px;
     outline: none;
     &::placeholder {
-      font - weight: 600;
+      font-weight: 600;
     color: var(--color-border);
         }
       }
@@ -144,7 +144,7 @@ const HeaderStyle = styled.header`
 
     .header-content {
       min-height: calc(100vh - 10vh);
-    padding: 0 10rem 5rem 10rem;
+    padding: 0 10rem 2rem 10rem;
 
     .text-content {
       > h1 {

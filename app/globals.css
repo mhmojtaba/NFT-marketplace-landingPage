@@ -14,3 +14,8 @@ body {
   background-color: var(--color-bg);
   color: hsla(180, 7%, 75%, 0.9);
 }
+
+section {
+  position: relative;
+  z-index: 15;
+}
