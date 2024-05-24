@@ -7,6 +7,7 @@ import Card from '../card/Card';
 import Hero from '../hero/page';
 import TextSection from '../textSection/TextSection';
 import VideoSection from '../videoSection/VideoSection';
+import Footer from '../footer/Footer';
 
 
 const MainSection = () => {
@@ -45,7 +46,7 @@ const MainSection = () => {
             </SectionLayout>
 
 
-
+            <Footer />
         </MainStyle>
     )
 }

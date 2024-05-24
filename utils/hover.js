@@ -40,8 +40,8 @@ const hover3d = (ref, { x = 0, y = 0, z = 0 }) => {
   const yTransform = isHovering ? yCoords * y : 0;
   const zTransform = isHovering ? z : 0;
 
-  const transform = `perspective(1000px) rotateX(${xTransform}deg) rotateY(${yTransform}deg) translateZ(${zTransform}px)`;
-  const transition = isHovering ? "all 0.5s ease-in-out" : "";
+  const transform = `perspective(1000px) rotateX(${yTransform}deg) rotateY(${-xTransform}deg) translateZ(${zTransform}px)`;
+  const transition = isHovering && "all 0.1s ease";
 
   return { transform, transition };
 };

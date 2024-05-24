@@ -41,7 +41,7 @@ const Header = () => {
         <div className=" flex items-center gap-1 cursor-pointer">
           <Image src={logo} alt="logo" width={100} height={77} />
           <h2
-            className={`hover:text-gray-200 hover:scale-105 ${abril.className}`}
+            className={`hover:text-gray-200 hover:scale-110 ${abril.className}`}
           >
             MarketPlace
           </h2>
@@ -93,7 +93,7 @@ const Header = () => {
             transform: transform, transition: transition
           }}>
             <Image src={"/nft_prev_ui.png"} width={2000} height={2000} alt="NFT ape" style={{
-              transform: transform, transition: transition
+              transform: imageTransform, transition: imageTransition
             }} />
           </div>
         </div>
@@ -132,13 +132,16 @@ const HeaderStyle = styled.header`
       display: flex;
     align-items: center;
     gap: 2rem;
-    li {
+
+    li a{
+
       transition: all 0.2s ease-in-out;
-    &:hover {
-      color: #fff;
-    transform: scale(1.1);
-        }
+       &:hover {
+
+       color: #fff;
+        transform: scale(1.1);
       }
+    }
     }
   }
 
