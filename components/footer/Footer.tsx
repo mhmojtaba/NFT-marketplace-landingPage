@@ -6,6 +6,13 @@ import logo from "/public/logo.png";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai";
 import { BsDiscord } from "react-icons/bs";
 import { footer } from '../../utils/footer'
+import { Abril_Fatface } from "next/font/google";
+
+
+const abril = Abril_Fatface({
+    subsets: ["latin"],
+    weight: "400",
+});
 
 const Footer = () => {
     return (
@@ -13,14 +20,16 @@ const Footer = () => {
             <nav>
                 <div className="logo-container">
                     <div className="logo">
-                        <Image src={logo} alt="logo" width={60} />
-                        <h2>logo</h2>
+                        <Image src={logo} alt="logo" width={80} />
+                        <h2
+                            className={`hover:text-gray-200 hover:scale-110 ${abril.className}`}
+                        >logo</h2>
                     </div>
                     <div className="input">
                         <input type="text" placeholder="subscribe ...." />
                         <button>&#8594;</button>
                     </div>
-                    <p>Create, sell and collect the best NFTs. powered by Mojtaba.Web3 !</p>
+                    <p className="text-base">Create, sell and collect the best NFTs. powered by Mojtaba.Web3 !</p>
                     <div className="socials">
                         <AiFillGithub />
                         <AiFillTwitterCircle />
@@ -45,8 +54,8 @@ const Footer = () => {
                 </div>
             </nav>
             <p className="rights">
-                <a href="">&copy; Mojtaba web3. All rights reserved!</a>
-                <a href="">Privacy Policy | Terms of services.</a>
+                <a href="/">&copy; Mojtaba web3. All rights reserved!</a>
+                <a href="/">Privacy Policy | Terms of services.</a>
             </p>
         </FooterStyled>
     )
@@ -149,6 +158,10 @@ const FooterStyled = styled.footer`
         margin-top: 2rem;
         padding: 2rem 0;
         border-top: 1px solid var(--color-border);
+
+        a{
+            font-size: 1rem;
+        }
     }
 `
 
